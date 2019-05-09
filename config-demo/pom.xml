@@ -30,7 +30,7 @@
             <scope>test</scope>
         </dependency>
 
-        <!--        自定义属性智能补全-->
+        <!-- 自定义属性智能补全-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-configuration-processor</artifactId>
