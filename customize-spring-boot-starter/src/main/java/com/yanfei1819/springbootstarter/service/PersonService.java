@@ -16,8 +16,8 @@ public class PersonService {
     public PersonService() {
     }
 
-    public void say(){
-        System.out.println("hello,I am "+properties.getName()+",and I am "+properties.getAge()+
-                ",and My salary "+properties.getSalary());
+    public void say() {
+        System.out.println("hello,I am " + properties.getName() + ",and I am " + properties.getAge() +
+                ",and My salary " + properties.getSalary());
     }
 }

@@ -24,7 +24,7 @@ public class PersonServiceAutoConfiguration {
 
     @Bean
     @ConditionalOnMissingBean(PersonService.class)  // 当容器中没有指定Bean的情况下，自动配置PersonService类
-    public PersonService personService(){
+    public PersonService personService() {
         PersonService personService = new PersonService(properties);
         return personService;
     }
