@@ -45,7 +45,7 @@
         </javaTypeResolver>
 
         <!-- 生成实体类地址 -->
-        <javaModelGenerator targetPackage="com.yanfei1819.mybatisdemo.db.dto" targetProject="${project}" >
+        <javaModelGenerator targetPackage="com.yanfei1819.mybatisgeneratordemo.db.dto" targetProject="${project}" >
             <property name="enableSubPackages" value="false"/>
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
@@ -54,7 +54,7 @@
             <property name="enableSubPackages" value="false" />
         </sqlMapGenerator>
         <!-- 生成mapxml对应client，也就是接口dao -->
-        <javaClientGenerator targetPackage="com.yanfei1819.mybatisdemo.db.dao" targetProject="${project}" type="XMLMAPPER" >
+        <javaClientGenerator targetPackage="com.yanfei1819.mybatisgeneratordemo.db.dao" targetProject="${project}" type="XMLMAPPER" >
             <property name="enableSubPackages" value="false" />
         </javaClientGenerator>
         <!-- table可以有多个,每个数据库中的表都可以写一个table，tableName表示要匹配的数据库表,也可以在tableName属性中通过使用%通配符来匹配所有数据库表,只有匹配的表才会自动生成文件 -->
