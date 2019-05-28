@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>追梦1819的SpringBoot教程</title>
+
+    <style>
+        table, table tr th, table tr td {
+            border: 1px solid #0094ff;
+        }
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <main role="main">
+            <div class="content_bottom_right" id="mobilephoneList">
+                <div class="input-group">
+                    <table class="table text-nowrap imagetable">
+                        <thead>
+                        <tr>
+                            <th>序号</th>
+                            <th>名称</th>
+                            <th>价格</th>
+                            <th>颜色</th>
+                            <th>生产日期</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody th:each="mobilephone,item:${response}">
+                        <tr>
+                            <td>[[${item.count}]]</td>
+                            <td>[[${mobilephone.name}]]</td>
+                            <td>[[${mobilephone.price}]]</td>
+                            <td>[[${mobilephone.color}]]</td>
+                            <td>[[${mobilephone.productionDate}]]</td>
+                            <td>
+                                <a class="btn btn-sm btn-danger"
+                                   th:onclick="'javascript:detail(\''+${mobilephone.id}+'\');'">详情</a>
+                                <a th:href="@{/mobile/phone/toEditMobilePhone(id=${mobilephone.id})}">编辑</a>
+
+                                <a class="btn btn-sm btn-danger"
+                                   th:onclick="'javascript:delete(\''+${mobilephone.id}+'\');'">删除</a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+</body>
+</html>
+

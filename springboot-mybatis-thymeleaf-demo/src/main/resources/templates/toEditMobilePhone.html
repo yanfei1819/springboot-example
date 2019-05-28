@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>追梦1819的SpringBoot教程</title>
+</head>
+<body class="container">
+<br/>
+<h2>修改手机</h2>
+<br/>
+<div>
+    <form class="form-horizontal"  th:action="@{/mobile/phone/updateMobilePhone}" th:object="${vo}"  method="post">
+        <div>
+            <label>名称</label>
+            <input name="name" id="name" th:value="*{name}">
+        </div>
+        <div>
+            <label>颜色</label>
+            <input name="color" id="color" th:value="*{color}">
+        </div>
+        <div>
+            <label>价格</label>
+            <input name="price" id="price" th:value="*{price}">
+        </div>
+        <div>
+            <label>价格</label>
+            <input name="productionDate" id="productionDate" th:value="*{productionDate}">
+        </div>
+        <input type="submit" value="编辑"/>
+    </form>
+</div>
+</body>
+</html>
