@@ -13,6 +13,7 @@ public class JSPController {
 
     @RequestMapping(value = "/index",method = RequestMethod.GET)
     public String index(Model model){
+        System.out.println("-------------访问接口-----------");
         model.addAttribute("name","SpringBoot");
         return "index";
     }
