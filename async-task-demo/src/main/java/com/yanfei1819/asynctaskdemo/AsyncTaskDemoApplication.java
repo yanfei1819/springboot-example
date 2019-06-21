@@ -11,5 +11,4 @@ public class AsyncTaskDemoApplication {
     public static void main(String[] args) {
         SpringApplication.run(AsyncTaskDemoApplication.class, args);
     }
-
 }

@@ -9,7 +9,6 @@ import org.springframework.stereotype.Component;
 @Component
 public class AsyncTask {
 
-
     @Async
     public void task01() throws InterruptedException {
         Long start = System.currentTimeMillis();
@@ -36,6 +35,4 @@ public class AsyncTask {
         Long end = System.currentTimeMillis();
         System.out.println("第三个任务执行时间是："+(end-start));
     }
-
-
 }
