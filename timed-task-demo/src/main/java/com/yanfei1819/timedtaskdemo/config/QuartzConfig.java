@@ -12,14 +12,14 @@ import org.springframework.context.annotation.Configuration;
 public class QuartzConfig {
 
     @Bean
-    public JobDetail testQuartz2() {
+    public JobDetail testQuartzTask() {
         return JobBuilder.newJob(QuartzTask.class).withIdentity("quartztask").storeDurably().build();
     }
 
     @Bean
     public Trigger testQuartzTrigger2() {
         //cron方式，每隔5秒执行一次
-        return TriggerBuilder.newTrigger().forJob(testQuartz2())
+        return TriggerBuilder.newTrigger().forJob(testQuartzTask())
                 .withIdentity("quartztask")
                 .withSchedule(CronScheduleBuilder.cronSchedule("*/5 * * * * ?"))
                 .build();
