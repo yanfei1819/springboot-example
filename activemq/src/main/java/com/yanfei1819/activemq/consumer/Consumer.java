@@ -1,7 +1,7 @@
 package com.yanfei1819.activemq.consumer;
 
-import org.springframework.jms.annotation.JmsListener;
-import org.springframework.stereotype.Service;
+        import org.springframework.jms.annotation.JmsListener;
+        import org.springframework.stereotype.Service;
 
 /**
  * Created by 追梦1819 on 2019-06-26.
