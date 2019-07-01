@@ -30,7 +30,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .logoutSuccessUrl("/")
                 ;  // 定制注销后进入的页面
 
-        http.rememberMe();
+        http.rememberMe() // 记住功能
+                .rememberMeParameter("remember") //自定义rememberMe的name值，默认remember-Me
+                .tokenValiditySeconds(10); // 记住时间
+
 
     }
 
