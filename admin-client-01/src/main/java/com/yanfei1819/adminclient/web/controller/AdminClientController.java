@@ -1,12 +1,12 @@
 package com.yanfei1819.adminclient.web.controller;
 
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * Created by 追梦1819 on 2019-06-24.
  */
-@Controller
+@RestController
 public class AdminClientController {
 
     @GetMapping("/test")
