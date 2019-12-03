@@ -1,6 +1,6 @@
 # 项目的结构说明
 
-- activemq:SpringBoot 集成 activemq
+- activemq:[初识ActiveMQ](https://blog.csdn.net/weixin_39759846/article/details/95042517)
 - actuator:[应用监控之actuator](https://blog.csdn.net/weixin_39759846/article/details/96963170)
 - admin-client-01,admin-client-02,admin-server:[应用监控之Admin](https://blog.csdn.net/weixin_39759846/article/details/100535330)
 - aop:[SpringBoot与AOP](https://blog.csdn.net/weixin_39759846/article/details/102564614)
