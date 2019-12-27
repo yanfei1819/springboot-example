@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>我是首页</h1>
+<!--没有登录-->
+<div sec:authorize="!isAuthenticated()">
+    <a th:href="@{/login}">login</a>
+</div>
+<!--已登录-->
+<div sec:authorize="isAuthenticated()">
+    <div>
+        <form method="post" th:action="@{/logout}">
+            <input type="submit" value="logout">
+        </form>
+    </div>
+    登陆者：<span sec:authentication="name"></span>
+    登陆者角色：<span sec:authentication="principal.authorities"></span>
+</div>
+<div>
+    <h3>追梦1819的博客系列</h3>
+    <ul>
+        <!-- 通过角色判断是否展示-->
+        <div sec:authorize="hasRole('admin')">
+            <li><a th:href="@{/springboot/1}">SpringBoot 第一章</a></li>
+            <li><a th:href="@{/springboot/2}">SpringBoot 第二章</a></li>
+        </div>
+        <div sec:authorize="hasRole('test')">
+            <li><a th:href="@{/work/1}">work 第一章</a></li>
+            <li><a th:href="@{/work/2}">work 第二章</a></li>
+        </div>
+    </ul>
+</div>
+</body>
+</html>
