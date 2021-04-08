@@ -1,0 +1,1 @@
+package com.yanfei1819.kafka.producer;/** * Created by 追梦1819 on 2020-05-26. */public class Product {}

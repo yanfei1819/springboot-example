@@ -1,0 +1,1 @@
+package com.yanfei1819.kafka.consumer;/** * Created by 追梦1819 on 2020-05-26. */public class Consumer {}

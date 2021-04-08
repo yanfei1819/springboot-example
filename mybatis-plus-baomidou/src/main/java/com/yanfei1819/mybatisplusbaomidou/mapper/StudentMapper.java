@@ -1,0 +1,1 @@
+package com.yanfei1819.mybatisplusbaomidou.mapper;import com.baomidou.mybatisplus.core.mapper.BaseMapper;import com.yanfei1819.mybatisplusbaomidou.pojo.Student;import org.apache.ibatis.annotations.Mapper;/** * Created by shiyanfei on 2021-04-08. */@Mapperpublic interface StudentMapper extends BaseMapper<Student> {}
